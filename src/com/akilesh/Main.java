@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
@@ -37,9 +37,7 @@ public class Main {
     public static int[] sortIntegers(int[] array) {
         int[] sortedArray = new int[array.length];
 
-        for (int i = 0; i < array.length; i++) {
-            sortedArray[i] = array[i];
-        }
+        System.arraycopy(array, 0, sortedArray, 0, array.length);
 
         boolean flag = true;
         int temp;
